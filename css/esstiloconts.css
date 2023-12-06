@@ -10,8 +10,14 @@
     font-size: 24px;
     color: #ffffff;
     background-color: #3399ff; 
-    align-items: center;
 }
+
+    .secao {
+        text-align: center; 
+        max-width: 600px; 
+        margin: 0 auto; 
+    }
+
 .menu {
     display: flex;
     text-align: center;
