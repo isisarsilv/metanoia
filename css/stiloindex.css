@@ -24,6 +24,10 @@ body {
     overflow-y: scroll;
 }
 
+.sidebar.active {
+    left: 0; 
+}
+
 ::-webkit-scrollbar-track {
     background-color: #ffffff;
 }
@@ -41,6 +45,8 @@ body {
 .sidebar-header {
     width: 100%;
     margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
 }
 
 .sidebar {
@@ -52,21 +58,28 @@ body {
     width: 240px;
     height: 100%;
     padding: 40px 10px 30px 10px;
-    border-right: 1px solid #ffffff;
-
+    border-right: 0.5px solid #ffffff;
 }
 
 .menu-img {
     width: 100px;
     min-height: 100px;
-    border-radius: 50%;
     object-fit: cover;
     transition: transform 0.4s;
-    margin-left: 10px;
 }
 
 .menu-img:hover {
     transform: scale(1.5);
+}
+
+.menu-img-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-img-footer img {
+    width: 60px;
+    margin: 0 8px;
 }
 
 .sidebar button {
@@ -185,9 +198,11 @@ a {
 
 .centralizo {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 .centralizar img {
@@ -262,4 +277,85 @@ a {
 
 .footer .social-media a img:hover {
     opacity: 0.8;
+}
+
+.burger {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    position: fixed;
+    z-index: 1000;
+    display: none; 
+    top: -5px;
+    left: 10px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+    
+    .sidebar {
+        left: -250px; 
+        transition: left 0.3s ease;
+        background-color: #00008b;
+    }
+
+    .sidebar.active {
+        left: 0; 
+    }
+
+    .imagi {
+        margin-left: 60px;
+    }
+
+    .logao {
+        display: flex;
+        justify-content: center;
+    }
+
+    .JPG {
+        max-height: 300px;
+    }
+
+    .main {
+        margin: 0 10px;
+    }
+}
+
+@media (min-width: 620px) and (max-width: 768px) {
+    .JPG {
+        max-height: 400px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 870px) {
+    .JPG {
+        max-height: 300px;
+    }
+}
+
+@media (min-width: 870px) and (max-width: 1200px) {
+    .JPG {
+        max-height: 450px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .JPG {
+        max-height: 600px;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+    .JPG {
+        max-height: 600px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .JPG {
+        max-height: 100%;
+    }
 }

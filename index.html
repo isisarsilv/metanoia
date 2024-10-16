@@ -13,7 +13,10 @@
 
 <body>
 
-    <aside class="sidebar">
+    <div class="burger" id="burger-icon">
+        &#9776;
+    </div>
+    <aside class="sidebar" id="sidebar">
 
         <header class="sidebar-header">
 
@@ -54,9 +57,11 @@
                 </li>
                 <br>
                 <br>
-                <img class="menu-img" src="img/logoifpr.png" alt="menu" />
+                <div class="menu-img-footer">
+                    <img class="menu-img" src="img/logoifpr.png" alt="menu" />
 
-                <img class="menu-img" src="img/teiu.png" alt="menu" />
+                    <img class="menu-img" src="img/teiu.png" alt="menu" />
+                </div>
 
         </nav>
 
@@ -72,9 +77,11 @@
 
                         <a href="login.html"> <img src="img/user.png" alt="logo" class="imagi"> </a>
 
-                        <img src="img/logogremio.png" alt="logo" class="logao">
+                        
                         <div class="centralizo">
+                            <img src="img/logogremio.png" alt="logo" class="logao">
                             <h1> Sejam bem-vindos ao site do grêmio estudantil do Campus Avançado Goierê! </h1>
+                            
                         </div>
                         <div class="JPG">
                             <img src="img/banner.JPG">
@@ -145,5 +152,6 @@
     </main>
 </body>
 <script src="js/banner.js"></script>
+<script src="js/burger.js"></script>
 
 </html>
