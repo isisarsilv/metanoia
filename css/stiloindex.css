@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(to bottom, #00008b, #0000ff, #add8e6);
+    background-size: 500% 100%;
+    color: #fff;
+}
+
+@keyframes degrade {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+.sidebar {
+    overflow-y: scroll;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+}
+
+
+.sidebar-header {
+    width: 100%;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 240px;
+    height: 100%;
+    padding: 40px 10px 30px 10px;
+    border-right: 0.5px solid #ffffff;
+}
+
+.menu-img {
+    width: 100px;
+    min-height: 100px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.menu-img:hover {
+    transform: scale(1.5);
+}
+
+.menu-img-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-img-footer img {
+    width: 60px;
+    margin: 0 8px;
+}
+
+.sidebar button {
+    height: 60px;
+    background: transparent;
+    border: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+
+}
+
+.sub-menu {
+    padding: 6px 6px 14px 80px;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.sidebar button>span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+    transition: all 0.4s;
+}
+
+.sidebar button:hover>span {
+    background: rgb(163, 164, 167);
+}
+
+.sidebar button i {
+    position: relative;
+    font-size: 28px;
+    transition: 0.2s;
+}
+
+.sidebar button span {
+    font-size: 16px;
+}
+
+.sidebar>nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+
+.main {
+    margin-left: 250px;
+    margin-right: 6px;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+    position: inline-block;
+    top: 0;
+    float: right;
+}
+
+.imagi {
+    width: 60px;
+    height: 60px;
+    position: inline-block;
+    top: 0;
+    float: left;
+}
+
+.JPG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* ou a altura que você preferir */
+    overflow: hidden;
+}
+
+.JPG img {
+    width: 75%;
+    /* Ajustar a imagem para caber no container */
+    height: auto;
+
+}
+
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.centralizo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.centralizar img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logao {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.slider {
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 600px;
+    height: 600px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+}
+
+.footer {
+
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .container {
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.footer .footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+.footer .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-media a img {
+    width: 30px;
+}
+
+.footer .social-media a img:hover {
+    opacity: 0.8;
+}
+
+.burger {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+    top: -5px;
+    left: 10px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .sidebar {
+        left: -250px;
+        transition: left 0.3s ease;
+        background-color: #00008b;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .imagi {
+        margin-left: 60px;
+    }
+
+    .logao {
+        display: flex;
+        justify-content: center;
+    }
+
+    .JPG {
+        max-height: 300px;
+    }
+
+    .main {
+        margin: 0 10px;
+    }
+}
+
+@media (min-width: 620px) and (max-width: 768px) {
+    .JPG {
+        max-height: 400px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 870px) {
+    .JPG {
+        max-height: 300px;
+    }
+}
+
+@media (min-width: 870px) and (max-width: 1200px) {
+    .JPG {
+        max-height: 450px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .JPG {
+        max-height: 600px;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+    .JPG {
+        max-height: 600px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .JPG {
+        max-height: 100%;
+    }
+}
